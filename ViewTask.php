@@ -1,11 +1,13 @@
+<?php session_start();
+$name=$_SESSION['name'];?>
 <!DOCTYPE html>
 <html>
 <head><link rel="stylesheet" href="style.css" type="text/css"></head>
 <body>
 <a href="index.php">Home</a>
-<?php session_start();
+<a href="addTasks.php?add=<?php echo $name;?>">AddTasks</a>
+<?php
 include('dbconnect.php');
-$name=$_SESSION['name'];
 $query="SELECT name, priority, task, dueDate, status,ta.taskID FROM person p
 INNER JOIN tasks as ta ON p.PID=ta.PID
 INNER JOIN duetime as d ON ta.taskID=d.taskID
