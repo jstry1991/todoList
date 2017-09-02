@@ -32,9 +32,7 @@
 	}
 	if(isset($_GET['add']))
 	{
-		echo "hi";
 		$name = $_GET['add'];
-		echo $name;
 	}
 	include('dbclose.php');
 	?>
