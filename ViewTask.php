@@ -7,7 +7,7 @@ $name=$_SESSION['name'];?>
 <div class ="center">
 	<div class="box">
 <a href="index.php">Home</a>
-<a href="addTasks.php?add=<?php echo $name;?>">AddTasks</a>
+<a href="addTasks.php?add=<?php echo $name;?>">AddTasks</a><br><br>
 <?php
 include('dbconnect.php');
 $query="SELECT name, priority, task, dueDate, status,ta.taskID FROM person p
