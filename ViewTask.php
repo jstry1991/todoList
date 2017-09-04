@@ -14,7 +14,8 @@ $query="SELECT name, priority, task, dueDate, status,ta.taskID FROM person p
 INNER JOIN tasks as ta ON p.PID=ta.PID
 INNER JOIN duetime as d ON ta.taskID=d.taskID
 WHERE name='$name'
-GROUP BY name,priority,task,dueDate,status,ta.taskID"; 
+GROUP BY name,priority,task,dueDate,status,ta.taskID
+ORDER BY dueDate ASC,FIELD(priority,'high','normal','low') ASC"; 
 $result =mysqli_query($conn,$query);
 if ($result->num_rows > 0) {
 	echo" <table>
