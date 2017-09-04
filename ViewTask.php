@@ -4,6 +4,8 @@ $name=$_SESSION['name'];?>
 <html>
 <head><link rel="stylesheet" href="style.css" type="text/css"></head>
 <body>
+<div class ="center">
+	<div class="box">
 <a href="index.php">Home</a>
 <a href="addTasks.php?add=<?php echo $name;?>">AddTasks</a>
 <?php
@@ -22,6 +24,7 @@ if ($result->num_rows > 0) {
 		<th>task</th>
 		<th>status</th>
 		<th>Due Date</th>
+		<th>Edit Options</th>
 	</tr>";
 	echo"<form action=\"Edit.php\" method =\"POST\">";
 	while ($row = mysqli_fetch_assoc($result)){ 
@@ -40,5 +43,7 @@ else{
 
 include('dbclose.php');
 ?>
+</div>
+</div>
 </body>
 </html>
