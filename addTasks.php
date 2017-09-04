@@ -44,7 +44,7 @@
 				<fieldset>
 				<label>name:</label> <?php echo $name;?><br><br>
 					<label>task:</label>
-					<textarea name ="task" required></textarea><br><br>
+					<textarea name ="task" maxlength="200" required></textarea><br><br>
 					<label>priority:</label>
 					<select name = "priority">
 						<option value="high">High</option</option>
