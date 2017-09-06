@@ -30,12 +30,12 @@ if ($result->num_rows > 0) {
 	echo"<form action=\"Edit.php\" method =\"POST\">";
 	while ($row = mysqli_fetch_assoc($result)){ 
 		echo "<tr><td>".$row["name"]."</td><td>".$row["priority"]."</td><td>".$row["task"]."</td><td>".$row["status"]."</td><td>".$row["dueDate"]."</td><td>
-		<input type=\"checkbox\" name =\"update[]\"value=\"".$row['taskID']."\">complete".
-		"<input type=\"checkbox\" name =\"revert[]\"value=\"".$row['taskID']."\">incomplete".
-		"<input type=\"checkbox\" name =\"delete[]\"value=\"".$row['taskID']."\">delete"."</td></tr>";
+		<input type='checkbox' name ='update[]' value='".$row['taskID']."'>complete".
+		"<input type='checkbox' name ='revert[]' value='".$row['taskID']."'>incomplete".
+		"<input type='checkbox' name ='delete[]' value='".$row['taskID']."'>delete"."</td></tr>";
 	}
 	echo"</table>";
-	echo"<input type=\"submit\" name =\"submit\" value=\"submit\">";
+	echo"<input type='submit' name ='submit' value='submit'>";
 	echo"</form>";
 }
 else{
